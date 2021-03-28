@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{$seo.description}">
+	<meta name="keywords" content="{$seo.keywords}">
+	<!-- Made By Jerry blog.jerryiweb.com -->
+	<title>{$seo.title}</title>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container col-md-8 col-md-offset-2">
+		<div class="row">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+				  <div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">{$seo.title}</a>
+				  </div>
+				  <div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+					  <li id="index"><a href="/">首页</a></li>
+					  <li id="dianying"><a href="/index/Vlists/dianying/1">电影</a></li>
+					  <li id="dianshi"><a href="/index/Vlists/dianshi/1">电视剧</a></li>
+					  <li id="dongman"><a href="/index/Vlists/dongman/1">动漫</a></li>
+					  <li id="zongyi"><a href="/index/Vlists/zongyi/1">综艺</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								 <input id="searchtext" type="text" class="form-control" placeholder="Search">
+								 <button id="search" type="button" class="btn btn-default">搜索</button>
+							</div>
+						</form>
+					</ul>
+				  </div>
+				</div>
+			  </nav>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class=""></li>
+							<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+							<li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<a href="/index/Detail/tv/Q4VpbH7lSWTqNn">
+									<img class="first-slide" src="https://img14.360buyimg.com/ddimg/jfs/t1/163509/9/1560/269366/5ff7e7c3Efe8cf077/04d423f25da7bd2c.jpg" alt="First slide" class="img-responsive" style="width: 100%;height: 320px;">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>有翡</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="/index/Detail/ct/P0DnbJ7lL4KyDz">
+									<img class="second-slide" src="https://alipan.jerryiweb.com/file/5fbe566555f003a68b47c511/5ffd00331939dc8b6a914a09a85eedc1a96790ca/qsmy6.jpg" alt="Second slide" class="img-responsive" style="width: 100%;height: 320px;">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>秦时明月之沧海纵横</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="/index/Detail/m/gqjmZRH6QXn4Sx">
+									<img class="third-slide" src="https://liangcang-material.alicdn.com/prod/upload/b978d21b5f47414ba20bbb00df8dfbda.jpg?x-oss-process=image/resize,w_2074/interlace,1/quality,Q_80/sharpen,100" alt="Third slide" class="img-responsive" style="width: 100%;height: 320px;">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>除暴2020</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading text-center">
+						<span class="glyphicon glyphicon-facetime-video"></span><span style="font-size: 18px;"> 电视剧</span>
+				</div>
+				<div class="panel-body">
+					{volist name="tv" id="tv"}
+						<div class="contanier col-xs-6 col-md-4" style="margin-top:4px;height:320px;">
+							<a href="/index/Detail/{$tv.type}/{$tv.urlid}">
+								<img src="{$tv.img}" alt="{$tv.name}" style="width:100%;height:280px;">
+							</a>
+							<p class="text-center" style="font-size:18px;">{$tv.name}</p>
+						</div>
+					{/volist}
+				</div>
+			</div>
+			<div class="panel panel-default" style="margin-top: 40px;">
+				<div class="panel-heading text-center">
+					<span class="glyphicon glyphicon-facetime-video"></span><span style="font-size: 18px;"> 电影</span>
+				</div>
+				<div class="panel-body">
+					{volist name="dy" id="dy"}
+					<div class="contanier col-xs-6 col-md-4" style="margin-top:4px;height:320px;">
+						<a href="/index/Detail/{$dy.type}/{$dy.urlid}">
+							<img src="{$dy.img}" alt="{$dy.name}" style="width:100%;height:280px;">
+						</a>
+						<p class="text-center" style="font-size:18px;">{$dy.name}</p>
+					</div>
+					{/volist}
+				</div>
+			</div>
+			<div class="panel panel-default" style="margin-top: 40px;">
+				<div class="panel-heading text-center">
+					<span class="glyphicon glyphicon-facetime-video"></span><span style="font-size: 18px;"> 动漫</span>
+				</div>
+				<div class="panel-body">
+					{volist name="dm" id="dm"}
+					<div class="contanier col-xs-6 col-md-4" style="margin-top:4px;height:320px;">
+						<a href="/index/Detail/{$dm.type}/{$dm.urlid}">
+							<img src="{$dm.img}" alt="{$dm.name}" style="width:100%;height:280px;">
+						</a>
+						<p class="text-center" style="font-size:18px;">{$dm.name}</p>
+					</div>
+					{/volist}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-body text-center">
+					<span style="font-size: 18px;">本站所有内容均来自互联网，如果本站部分内容侵犯您的版权请告知，在必要证明文件下我们第一时间撤除</span><br />
+					<span class="glyphicon glyphicon-copyright-mark"></span><span style="font-size: 18px;"> All Rights
+						Reserved <a href="https://blog.jerryiweb.com/">Jerry</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="application/JavaScript">
+		$(document).ready(function () {
+			var pathname = window.location.pathname;
+			if (pathname == '/') {
+				$('#index').addClass('active');
+			}
+			$('#search').click(function () { 
+				window.location.href = '/index/Search/'+$('#searchtext').val();
+			});
+		});
+	</script>
+</body>
+
+</html>
